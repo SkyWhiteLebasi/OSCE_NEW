@@ -1,0 +1,72 @@
+	#vertical {
+    	width:210px;
+		height: 40px;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+        background: #2879b0;
+		}
+	#vertical ul {
+    	width:210px;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+        background: #2879b0;
+		}
+		#vertical ul:hover {
+		color: #443e3e;
+		}
+        #vertical ul ul {
+		position:absolute;
+		top: 0;
+		left:100%;
+		}
+		a:hover a:hover {
+		color: #efeee;
+		background: #0088cc;
+		}
+        
+        li    {
+		position:relative;
+		}
+        
+        #vertical ul  ul {
+		display:none;
+		}
+        
+        #vertical ul li:hover ul {
+		display:block;
+		}
+        
+        #vertical ul li:hover ul ul{
+		display:none;
+		}
+	#vertical ul ul li:hover  ul{
+		display:block;
+		} 
+        #vertical ul li:hover ul ul ul {
+		display:none;
+		}
+		#vertical ul ul   ul li:hover ul{
+		display:block;
+		}
+      span.menor {
+		margin-left:100px;
+		}
+		li li li{
+		width: 210px;
+		height: 30px;
+		padding-left: 15px; 
+		background: url(../images/flecha.gif) no-repeat top left;
+		}
+		
+		li li li a{
+		text-decoration:none; 
+		font-family: Arial Blak;
+		}
+		
+		li li li a:hover{
+		color: #443e3e;
+		text-decoration:underline; 
+		font-family: Arial Blak;
+		}

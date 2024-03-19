@@ -1,0 +1,68 @@
+/* CSS Document */
+.topmenu{
+	font-family: Calibri;
+	font-weight:400;
+	list-style: none;
+	padding: 0 20px;	
+	margin: 0;
+	float: left;
+	width: 96.5%;
+	background: #222;
+	font-size: 1em;
+	background: url(../images/top_menu.gif) repeat-x;
+}
+.topmenu li{
+	float: left;
+	margin: 0;	
+	padding: 0 15px 0 0;
+	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+.topmenu li a{
+	padding: 10px 5px;
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+.topmenu li a:hover{
+	background: #0088CC;
+}
+.topmenu li span { /*--Drop down trigger styles--*/
+	width: 17px;
+	height: 35px;
+	float: left;
+	background: url(../images/submenu_btn.gif) no-repeat center top;
+}
+.topmenu li span.subhover {
+	background-position: center bottom; 
+	cursor: pointer;
+} /*--Hover effect for trigger--*/
+.submenu {
+	list-style: none;
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: 0; top: 35px;
+	background: #2879b0;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #0088CC;
+}
+.submenu li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #0088CC; /*--Create bevel effect--*/
+	border-bottom: 1px solid #0088CC; /*--Create bevel effect--*/
+	clear: both;
+	width: 170px;
+}
+.submenu li a {
+	float: left;
+	width: 145px;
+	background: #2879b0 url(../images/submenu_bg.gif) no-repeat 10px center;
+	padding-left: 20px;
+}
+.submenu li a:hover { /*--Hover effect for subnav links--*/
+	background: #0088CC url(../images/submenu_bg.gif) no-repeat 10px center;
+
+}/* CSS Document */
+

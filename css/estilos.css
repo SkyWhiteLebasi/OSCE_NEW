@@ -1,0 +1,138 @@
+	/* CSS Document */
+#cuerpo{
+	width:1100px;
+	margin:auto;
+	background-color:#FFFFFF;
+}
+#fondo-logo{
+	background-image:url(../Imagenes/fondo-logo.GIF);
+	background-repeat:repeat-x;
+	height: 139px;
+}
+#formularioCrear{
+	font-family: Calibri;
+	width: 65%;
+	background-image:url(../Imagenes/fondo-formulario.GIF);
+	color:#FFF;
+	padding: 20px;
+	margin: auto;
+}
+.boton:hover{
+	background-color:#00BBFF;
+}
+.cajaContenido{
+	display:inline-block;
+	background-color:#2879b0;
+	padding: 20px 20px;
+	border-radius: 10px;
+	color:#FFF;
+}
+.tabla-costos{
+	width: 80%;
+	background-image:url(../Imagenes/fondo-formulario.GIF);
+	padding: 20px;
+	margin: auto;
+}
+.tablaCont{
+	margin: auto;
+	font-family:Calibri;
+	font-size:14px;
+	color:#FFF;
+}
+#overlay{
+	position: fixed;
+	background: #000;
+	height:100%;
+	width:100%;
+	z-index:99998;
+	display:none;
+	top: 0;
+	left: 0;
+}
+#ventana{
+	position: fixed;
+	height:100%;
+	width:100%;
+	z-index:99998;
+	display:none;
+	top: 0;
+	left: 0;
+}
+.botonExp{
+	font-family: Calibri;
+	padding: 7px;
+	background: #006699;
+	display: inline-block;
+	border-radius: 5px;
+	text-decoration: none;
+	color:#FFF;
+	border: solid 1px #006699;
+}
+.botonExp:hover{
+	background: #0088CC;
+	border-color: #006699;
+
+}
+.etiqueta{
+	font-family: Calibri;
+	color:#006699;
+	text-align:right;
+}
+.etiquetaExp{
+	font-family: Calibri;
+	color:#FFF;
+}
+.titulo{
+	font-family: Calibri;
+	color:#f3f3f3;
+	font-size:20px;
+	font-weight:bold;
+}
+.tituloC{
+	font-family: Calibri;
+	color:#006699;
+	font-size:20px;
+	font-weight:bold;
+}
+.entrada{
+	font-family: Calibri;
+	padding:3px;
+	border:solid 1px #006699;
+	border-radius:3px;
+	color:#006699;
+}
+.entrada:focus{
+	box-shadow:0 0 5px #006699;
+}
+/*estils para tablas con fonfos celeste*/
+.tablaC{
+	border:thin #006699 solid;
+	border-radius: 5px;
+	background:#FFFFFF;
+}
+.filaPar{
+	background-color:#FFF;
+	color:#006699;
+	font-family: Calibri;
+}
+.filaPar:hover{
+}
+.filaImpar{
+	background-color:#D2F4FF;
+	color:#006699;
+	font-family: Calibri;
+}
+.filaImpar:hover{
+}
+.cabeceraC{
+	padding: 5px 10px;
+	font-family: Calibri;
+	background-color:#006699;
+	border-radius: 5px;
+	color:#FFF;
+	margin:0;
+}
+.resaltar{
+color: #fff;
+background-color:#2879b0;
+}
