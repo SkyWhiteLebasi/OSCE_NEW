@@ -107,7 +107,7 @@
 	
 		$consulta = "SELECT TP.* 
 					FROM tipo_proceso as TP,
-						 proceso_contrato as PC
+						 proceso_contrado as PC
 					WHERE PC.id_contrato = $objeto AND
 						  PC.clave_proceso = TP.clave";
 		$resultado = $conexion->query($consulta);
@@ -153,7 +153,7 @@
 							TP.valor_inf,
 							TP.intervalo_sup,
 							TP.valor_sup
-					FROM topes AS TP, proceso_contrato AS PC
+					FROM topes AS TP, proceso_contrado AS PC
 					WHERE TP.id_cont_proc = PC.id
 						AND PC.id_contrato = $objeto
 						AND PC.clave_proceso = '$clave'";
