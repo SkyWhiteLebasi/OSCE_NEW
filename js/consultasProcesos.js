@@ -1,6 +1,7 @@
 // JavaScript Document
 $(document).ready(function(e){
 	// llenamos todos los procesos 
+	
 	$.ajax({
 		type: 'POST',
 		url: 'lib/expedientes.php',

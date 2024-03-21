@@ -307,6 +307,15 @@
 	
 		$clave = 'N';
 		$stmt->execute();
+
+		$clave = 'A';
+		$stmt->execute();
+
+		$clave = 'I';
+		$stmt->execute();
+
+		$clave = 'K';
+		$stmt->execute();
 	
 		$stmt->close();
 		cerrarConexion($conexion);

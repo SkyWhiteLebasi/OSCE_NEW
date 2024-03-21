@@ -7,7 +7,7 @@
         $usuario = "root";
         $pass = "essalud";
         
-        // Conexión a la base de datos utilizando MySQLi
+        // Conexión a la base de datos utilizando MySQLi 
         $conexion = new mysqli($servidor, $usuario, $pass, $baseDatos);
 
         // Verificar si hay errores de conexión

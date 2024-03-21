@@ -34,8 +34,9 @@ function buscarProcesos($condicion, $valor){
         $consulta .= " AND DP.usuario = '$valor'";
     } elseif(strcmp($condicion, "6") == 0){
         $consulta .= " AND descripcion LIKE '%$valor%'";
+    } elseif(strcmp($condicion, "7") == 0){
+        $consulta;
     }
-
     $resultado = $conexion->query($consulta);
     if(!$resultado){
         die("Error en la consulta: " . $conexion->error);

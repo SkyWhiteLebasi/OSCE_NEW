@@ -1,5 +1,6 @@
 <script type="text/javascript" src="JS/funciones.js"></script>
 <script type="text/javascript" src="JS/consultasProcesos.js"></script>
+<script type="text/javascript" src="JS/buscar_expediente.js"></script>
 <div class="cajaContenido">
 	<table id="listaProcesos">
 		<thead>
@@ -7,17 +8,21 @@
 				<td align="center" colspan="8"><label class="titulo">SEGUIMIENTO DE LOS PROCESOS</label></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><strong class="etiquetaExp">Buscar Por:</strong></td>
+				<!-- <td colspan="2" align="center"><strong class="entrada" id="segun">Buscar Por:</strong></td> -->
 				<td colspan="6" align="left">
-					<select class="entrada">
-						<option value="1">Todos...</option>
-						<option value="2">Procesos</option>
-						<option value="3">Todos...</option>
-						<option value="4">Todos...</option>
-						<option value="5">Todos...</option>
-						<option value="6">Todos...</option>
+					<select class="entrada" id="segun">
+					<option value="1">Nro. Expediente</option>
+					<option value="2">Fecha</option>
+                    <option value="3">Tipo Contrato</option>
+                    <option value="4">Tipo Proceso</option>
+                    <option value="5">Responsable</option>
+					<option value="6">Palabra Clave</option>
+					<option value="7">TODOS</option>
 					</select>
 				</td>
+				<td id="entrada"><input type="text" id="valorBuscar" class="entrada" /></td>
+            <td><a class="botonExp" id="buscarExp" href="#">Buscar</a></td>
+	
 			</tr>
 			<tr>
 				<th class="cabeceraC"><label class="etiquetaExp">Nro Proceso</label></th>

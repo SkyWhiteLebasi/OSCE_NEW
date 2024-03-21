@@ -8,6 +8,62 @@ jQuery.fn.extend({
         return nuevoHtml;
     }
 });
+// jQuery.fn.extend({
+// 	resaltar: function(busqueda, claseCSSbusqueda){
+// 		var regex = new RegExp("(<[^>]*>)|("+ busqueda.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +')', 'ig');
+// 		var nuevoHtml=this.html(this.html().replace(regex, function(a, b, c){
+// 			return (a.charAt(0) == "<") ? a : "<span class=\""+ claseCSSbusqueda +"\">" + c + "</span>";
+// 		}));
+// 		return nuevoHtml;
+// 	}
+// });
+
+// función para realizar la búsqueda
+$('#buscarExp').on('click',function(evento){
+	// evento.preventDefault();
+	// var condicion = $('#segun').val();
+	// var valor = $('#valorBuscar').val();
+	evento.preventDefault();
+        var condicion = $('#segun').val();
+        var valor = '';
+        if (condicion != '7') {
+            valor = $('#valorBuscar').val();
+        }
+	$.ajax({
+		type: 'POST',
+		url: 'lib/expedientes.php',
+		data: {"operacion":"buscarExp","condicion":condicion,"valor":valor},
+		dataType: 'json',
+		success: function(data){
+			var $tabla = $('#listaProcesos tbody');
+			$tabla.children().remove();
+			$.each(data, function(indice, entidad){
+				var filaNueva = $('<tr>');
+				var nroProceso = $('<td>',{'align':'center'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.nroProceso}));
+				var objeto = $('<td>',{'align':'center'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.objeto}));
+				var proceso = $('<td>',{'align':'center'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.proceso}));
+				var monto = $('<td>',{'align':'center'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.monto}));
+				var fecha = $('<td>',{'align':'center'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.fecha}));
+				var responsable = $('<td>',{'width':'150px','align':'left'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.responsable}));
+				var descripcion = $('<td>',{'width':'300px','align':'left'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.descripcion}));
+				var observacion = $('<td>',{'width':'200px','align':'left'}).append($('<label>',{'class':"etiquetaExp",'text':entidad.observacion}));
+
+				// si estamos haciendo la búsqueda con palabras clave, resaltamos las palabras iguales al valor de búsqueda
+				if(condicion=="6"){
+					descripcion.resaltar(valor, "resaltar");
+				}
+
+				filaNueva.append(nroProceso,objeto,proceso,monto,fecha,responsable,descripcion,observacion);
+				$tabla.append(filaNueva);
+			});
+		},
+		error:function(e){
+			alert("Ha ocurrido un problema en la Búsqueda de Expedientes");
+		}
+	});
+});
+
+
 $(document).ready(function(e){
 	$('#aceptar').css('pointer-events','none');
 	$('#segun').change(function(evento){
@@ -60,11 +116,20 @@ $(document).ready(function(e){
 		}else if(valor=="6"){
 			entrada.append($('<input>',{'type':"text",'id':"valorBuscar",'class':"entrada"}));
 		}
+		else if(valor=="7"){
+			// entrada.append($('<input>',{'type':"text",'id':"valorBuscar",'class':"entrada"}));
+		}
 	});
 	$('#buscarExp').on('click',function(evento){
+		// evento.preventDefault();
+		// var condicion = $('#segun').val();
+		// var valor = $('#valorBuscar').val();
 		evento.preventDefault();
-		var condicion = $('#segun').val();
-		var valor = $('#valorBuscar').val();
+        var condicion = $('#segun').val();
+        var valor = '';
+        if (condicion != '7') {
+            valor = $('#valorBuscar').val();
+        }
 		$.ajax({
 			type: 'POST',
 			url: 'lib/expedientes.php',
